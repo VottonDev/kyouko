@@ -1,0 +1,21 @@
+Changelog
+
+21/10/17
+
+-- New design
+-- Copy link button fixed
+-- DNSSEC Enabled (Today or in 22nd)
+-- User Panel still being worked on
+
+1/9/17
+
+-- Updated Warrant Canary
+-- User Panel is being worked on
+
+
+16/8/17
+
+-- Removed onclick when you press Ohayo
+-- Removed 's from 100MiB's
+-- Did the same change to NoJS HTML as well
+-- Removed the useless code from JavaScript
