@@ -107,7 +107,7 @@ class DirectoryLister {
             // Filename for the browser to save the zip file
             header("Content-Disposition: attachment; filename=\"$filename_no_ext.zip\"");
 
-            //change directory so the zip file doesnt have a tree structure in it.
+            //change directory so the zip file doesn't have a tree structure in it.
             chdir($directory);
 
             // TODO: Probably we have to parse exclude list more carefully
@@ -367,9 +367,7 @@ class DirectoryLister {
         $factor = floor((strlen($bytes) - 1) / 3);
 
         // Calculate the file size
-        $fileSize = sprintf('%.2f', $bytes / pow(1024, $factor)) . $sizes[$factor];
-
-        return $fileSize;
+        return sprintf('%.2f', $bytes / pow(1024, $factor)) . $sizes[$factor];
 
     }
 
@@ -378,7 +376,7 @@ class DirectoryLister {
      * Returns array of file hash values
      *
      * @param  string $filePath Path to file
-     * @return array Array of file hashes
+     * @return array|false|string
      * @access public
      */
     public function getFileHash($filePath) {
@@ -647,10 +645,8 @@ class DirectoryLister {
 
         // Sort the array
         $reverseSort = in_array($this->_directory, $this->_config['reverse_sort']);
-        $sortedArray = $this->_arraySort($directoryArray, $this->_config['list_sort_order'], $reverseSort);
-
         // Return the array
-        return $sortedArray;
+        return $this->_arraySort($directoryArray, $this->_config['list_sort_order'], $reverseSort);
 
     }
 
@@ -908,10 +904,8 @@ class DirectoryLister {
         }
 
         // Set the relative thumbnail directory path
-        $relativePath = implode('/', $diffArray);
-
         // Return the relative path
-        return $relativePath;
+        return implode('/', $diffArray);
 
     }
 

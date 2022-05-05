@@ -49,21 +49,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
-<!--
-  <div class="leftAlert">
-    <h1>FileName</h1>
-    <div class="progressBar">
-      <div class="progress"></div>
-    </div><p class="progressText">0%</p>
-  </div>
-  <div class="leftAlert" style="margin-top:218px;">
-    <h1>FileName</h1>
-    <div class="progressBar">
-      <div class="progress"></div>
-    </div><p class="progressText">0%</p>
-  </div>
--->
 <div id="alertArea">
 
 </div>

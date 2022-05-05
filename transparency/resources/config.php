@@ -21,7 +21,7 @@ return array(
         'footer.php'
     ),
 
-    // If set to 'true' an directory with an index file (as defined below) will
+    // If set to 'true' a directory with an index file (as defined below) will
     // become a direct link to the index page instead of a browsable directory
     'links_dirs_with_index' => false,
 
