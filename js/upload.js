@@ -59,9 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function showUploadResult(res, elements) {
 
-		//var code = 999
-//		elements[1].style = "visibility: hidden;"
-//		elements[3].style = "visibility: hidden;"
 		const text = document.getElementById("progressPercentage-" + currID);
 		console.log("response: " + res.target.responseText)
 		let response = "NA";
@@ -141,8 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		const formData = new FormData();
 		formData.append("upload", file)
-
-			//document.getElementById("test").innerHTML = file.name
 
 			httpRequest.send(formData)
 	}
