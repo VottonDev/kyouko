@@ -105,23 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 		inProgress = false
 	}
-
-	/// TAKEN FROM W3 SCHOOLS ///
-	function getCookie(cname) {
-		const name = cname + "=";
-		const decodedCookie = decodeURIComponent(document.cookie);
-		const ca = decodedCookie.split(';');
-		for(let i = 0; i < ca.length; i++) {
-			let c = ca[i];
-			while (c.charAt(0) === ' ') {
-				c = c.substring(1);
-			}
-			if (c.indexOf(name) === 0) {
-				return c.substring(name.length, c.length);
-			}
-		}
-		return "";
-	}
 	
 	function updateProgress(evt) 
 	{
@@ -210,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			const e = c[index];
 			if ("file" === e.kind) {
 				const f = e.getAsFile(),
-					g = new File([f], "pasted-image." + f.type.match(/(?:[^\/]*\/)([^;]*)/)[1]);
+					g = new File([f], "pasted-image." + f.type.match(/\/(.*)/)[1]);
 				g.type = f.type;
 				start(g)
 			}
@@ -233,13 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		let dt = e.dataTransfer
 		let files = dt.files
 	}
-
-	function handleFiles(files) {
-		([...files]).forEach(function (file) {
-			start(file)
-		})
-	}
-
 	const k = {
 			dragCount: 0
 		},
@@ -258,5 +234,8 @@ function SetAnonState(state) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	document.querySelector('#anonTrue').addEventListener('click', SetAnonState(true));
+	document.querySelector('#anonTrue').addEventListener('click', function () {
+		SetAnonState(true);
+	}
+	);
 });
