@@ -39,15 +39,6 @@
     <!-- Custom styles for this template -->
     <link href="css/theme_red.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!--<script src="js/ie-emulation-modes-warning.js"></script>-->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 <div id="alertArea">
 
@@ -76,13 +67,10 @@
 
           <div class="inner cover">
             <form id="upload-form" enctype="multipart/form-data" method="post" action="upload.php?output=html">
-    <!--            <button id="upload-btn" class="btn" type="button">Select or drop file(s)</button>
-                <input type="file" id="upload-input" name="files[]" multiple="multiple" data-max-size="100MiB"/> -->
                     <div class="upload-btn-wrapper">
                         <button id="upload-btn" class="ubtn" type="button">Drop</button>
                         <input type="file" id="upload-input" name="files[]" multiple="multiple" data-max-size="100MiB" />
                     </div>
-    <!--            <input type="submit" value="Submit"/> -->
             </form>
           </div>
 

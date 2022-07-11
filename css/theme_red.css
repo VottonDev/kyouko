@@ -37,7 +37,7 @@
  */
 
 * {
-  font-family:Roboto;
+  font-family: Roboto, sans-serif;
   transition: background-color .5s, font-size 1s, width 0.1s, height 1s, margin 1s, padding 1s
 }
 
@@ -187,7 +187,7 @@ a:hover {
   margin-top: -5px;
 }
 
-fH {
+.fH {
   font-weight:700;
   font-size:20px;
   border-bottom:solid 6px white;
